@@ -77,7 +77,7 @@ export default function Home() {
             </Head>
 
             <div className="w-full h-full float-left flex justify-center items-center">
-                <div className="h-full w-[calc(100%-54px)] pt-[99px] pb-[40px] sm:w-[calc(100%-128px)] sm:pb-[64px] sm:pt-[64px] md:w-[calc(100%-340px)] md:pt-[56px] md:pb-[98px] flex flex-col justify-between">
+                <div className="h-full w-[calc(100%-54px)] pt-[40px] pb-[40px] sm:w-[calc(100%-128px)] sm:pb-[64px] sm:pt-[64px] md:w-[calc(100%-340px)] md:pt-[56px] md:pb-[56px] flex flex-col justify-between">
                     {
                         !showMore &&
                             <div className="w-full flex flex-col max-w-[540px]">
