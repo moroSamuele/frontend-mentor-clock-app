@@ -36,14 +36,16 @@ export default function Home() {
                 setInfo({ ...data })
             });
 
-        fetch("https://api.sunrise-sunset.org/json?lat=" + info.lat + "&lng=" + info.lon + "&formatted=0")
-            .then(res => res.json())
-            .then(data => {
-                const sunrise = new Date(data.results.sunrise);
-                const sunset = new Date(data.results.sunset);
-                setSunrise(sunrise.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
-                setSunset(sunset.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
-            });
+        if ( data.lon !== undefined ) {
+            fetch("https://api.sunrise-sunset.org/json?lat=" + info.lat + "&lng=" + info.lon, {method: "get"})
+                .then(res => res.json())
+                .then(data => {
+                    const sunrise = new Date(data.results.sunrise);
+                    const sunset = new Date(data.results.sunset);
+                    setSunrise(sunrise.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
+                    setSunset(sunset.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
+                });
+        }
     }, []);
 
 
