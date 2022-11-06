@@ -65,7 +65,7 @@ export default function Home() {
 
 
     return (
-        <div className={`${ itsDay ? "wallpaperDay" : "wallpaperNight" } w-full h-[100vh]`}>
+        <div className={`${ itsDay ? "wallpaperDay" : "wallpaperNight" } w-full h-full fixed`}>
             <Head>
                 <title>Frontend Mentor - Clock App</title>
 
