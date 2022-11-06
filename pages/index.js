@@ -30,7 +30,7 @@ export default function Home() {
 
     // Get current position by IP
     useEffect(() => {
-        fetch("http://ip-api.com/json/", {method: "get"})
+        fetch("https://ipapi.co/json/", {method: "get"})
             .then((response) => response.json())
             .then((data) => {
                 setInfo({ ...data })
@@ -107,7 +107,7 @@ export default function Home() {
                                 <h4 className="text-white xs:text-[15px] sm:text-[18px]">Good { itsDay ? "morning" : "evening" }<span className="hidden sm:block md:block float-right">, it&#39;s currently</span></h4>
                             </div>
                             <h1 className="text-white mt-[16px] sm:mt-0 text-[100px] leading-[100px] sm:text-[175px] sm:leading-[175px] md:text-[200px] md:leading-[200px]">{date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</h1>
-                            <h3 className="text-white mt-[16px] text-[15px] sm:mt-0 sm:text-[18px]">In {info.city !== "" ? info.city : "Unknown" }, {info.countryCode}</h3>
+                            <h3 className="text-white mt-[16px] text-[15px] sm:mt-0 sm:text-[18px]">In {info.city !== "" ? info.city : "Unknown" }, {info.country_code}</h3>
                         </div>
 
                         {
