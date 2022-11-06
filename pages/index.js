@@ -106,7 +106,7 @@ export default function Home() {
                                 </div>
                                 <h4 className="text-white xs:text-[15px] sm:text-[18px]">Good { itsDay ? "morning" : "evening" }<span className="hidden sm:block md:block float-right">, it&#39;s currently</span></h4>
                             </div>
-                            <h1 className="text-white mt-[16px] sm:mt-0 text-[100px] leading-[100px] sm:text-[175px] sm:leading-[175px] md:text-[200px] md:leading-[200px]">{date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</h1>
+                            <h1 className="text-white mt-[16px] sm:mt-0 text-[100px] leading-[100px] sm:text-[175px] sm:leading-[175px] md:text-[200px] md:leading-[200px]">{date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}).replace("AM","").replace("PM","")}</h1>
                             <h3 className="text-white mt-[16px] text-[15px] sm:mt-0 sm:text-[18px]">In {info.city !== "" ? info.city : "Unknown" }, {info.country_code}</h3>
                         </div>
 
