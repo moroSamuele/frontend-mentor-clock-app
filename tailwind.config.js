@@ -19,6 +19,10 @@ module.exports = {
       animation: {
         up: "up 200ms ease-in-out"
       },
+      screens: {
+        'xs': '375',
+        // => @media (max-width: 375px) { ... }
+      }
     },
   },
   plugins: [],
