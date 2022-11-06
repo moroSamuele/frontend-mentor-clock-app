@@ -1,26 +1,77 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+body,
+html {
+    width: 100%;
+    height: 100%;
+    float: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.wallpaperDay {
+    background: url('/images/day-wallpaper.jpg')no-repeat center center;
+    background-size: cover;
+}
+
+.wallpaperNight {
+    background: url('/images/night-wallpaper.jpg')no-repeat center center;
+    background-size: cover;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 28px;
+}
+
+h1, h2, h3, h5 {
+    font-weight: 700;
+}
+
+h4, h6 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 12.5rem;
+    line-height: 200px;
+    letter-spacing: -5px;
+}
+
+h2 {
+    font-size: 3.5rem;
+    line-height: 68px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 28px;
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 1.25;
+    line-height: 28px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+h5 {
+    font-size: 1.125rem;
+    line-height: 28px;
+}
+
+h6 {
+    font-size: 0.938rem;
+    line-height: 28px;
+    letter-spacing: 3px;
 }
